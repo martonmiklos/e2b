@@ -1,0 +1,21 @@
+1. Convert the eagle.dtd file (found in the EAGLE installation doc folder) to XSD with this tool:
+http://www.w3.org/2000/04/schema_hack/
+perl dtd2xsd.pl /opt/eagle-6.91.1/doc/eagle.dtd  > ../eagle.xsd
+
+modify the schema header to this:
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="drawing">
+
+Remove the second 
+    <element ref='t:compatibility' minOccurs='0' maxOccurs='1'/>
+    under the  <element name='eagle'>
+
+
+2. Generate the eagle.cpp class:
+./kxml_compiler --xml /home/mm/Projektek/qt/e2b/eagle.xsd -d /home/mm/Projektek/qt/e2b --verbose
+../../kode/kxml_compiler/kxml_compiler  --xml /home/mm/Projektek/qt/e2b/eagle.xsd -d /home/mm/Projektek/qt/e2b --verbose
+
+
+3. Layer colors:
+.eaglerc palette.0.xx, 1.xx, 2.xx for white, black and coloured
+backgrounds
