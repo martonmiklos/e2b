@@ -1,5 +1,0 @@
-Schema::Element e, schemaDocument.usedElements()
-
-relations-on megy végig ahol Schema::Attribute-ek vannak aminek nincs Used meg required metódusa
-
-az XSD::Attribute rendelkezik ezekkel (XmlElement-től származik)
