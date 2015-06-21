@@ -2,6 +2,9 @@
 EAGLE 2 Build
 
 A viewer application for opening and viewing Cadsoft EAGLE >v6 files. 
+Written in C++ using Qt 5.x.
+XML parser is generated from the dtd file provided with the EAGLE with the kode. 
+For details see the docs folder.
 
 Main goals:
 
